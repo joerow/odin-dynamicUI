@@ -1,3 +1,30 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+button {
+  all: unset;
+  cursor: pointer;
+}
+
 #main {
   display: flex;
+}
+#nav-bar-container {
+  background-color: antiquewhite;
+  height: 100vh;
+  width: max-content;
+}
+#nav-bar-container:hover {
+  animation: mymove 800ms;
+  animation-timing-function: ease-in-out;
+}
+@keyframes mymove {
+  from {
+    width: 50px;
+  }
+  to {
+    width: 100px;
+  }
 }
