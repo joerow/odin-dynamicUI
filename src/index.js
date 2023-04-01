@@ -1,3 +1,5 @@
+import "./style.css";
+
 function buildElement(elementType, id, classList, innerHTML) {
   const element = document.createElement(elementType);
   if (id === undefined) {
