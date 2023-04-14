@@ -94,7 +94,7 @@ function buildMain(param) {
   if (param === "default") {
     defaultMain();
   } else if (param === "images") {
-    images();
+    slider();
   }
 
   function defaultMain() {
@@ -112,13 +112,8 @@ function buildMain(param) {
       )
     );
   }
-
-  function images() {
-    document.body.append(buildElement("main", "", "", ""));
-    const main = document.querySelector("main");
-    console.log(main);
-  }
 }
 
 buildNav();
 buildMain("default");
+export { buildElement };
