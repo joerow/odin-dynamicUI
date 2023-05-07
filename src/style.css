@@ -114,6 +114,10 @@ button {
   cursor: pointer;
 }
 
+#img-slider {
+  display: flex;
+}
+
 /* small screens */
 @media only screen and (max-width: 600px) {
   .navbar {
