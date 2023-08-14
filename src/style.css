@@ -117,6 +117,23 @@ button {
 #img-slider {
   display: flex;
 }
+#img-window {
+  height: 90vh;
+  border: 1px solid #141418;
+  width: 70vw;
+  overflow: hidden;
+  margin: 5rem;
+}
+
+#img-holder {
+  width: 10000px;
+  height: inherit;
+  background-color: #6649b8;
+}
+
+.images {
+  height: inherit;
+}
 
 /* small screens */
 @media only screen and (max-width: 600px) {

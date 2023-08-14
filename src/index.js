@@ -115,5 +115,6 @@ function buildMain(param) {
 }
 
 buildNav();
-buildMain("default");
+/* buildMain("default"); */
+buildMain("images");
 export { buildElement };
