@@ -122,10 +122,9 @@ button {
   align-content: center;
 }
 #img-window {
-  margin-top: 5rem;
+  margin: 5rem;
   height: calc(100vh - 10rem);
   border: 1px solid #141418;
-
   overflow: hidden;
 }
 
