@@ -106,6 +106,7 @@ body::-webkit-scrollbar-thumb {
 
 main {
   margin-left: 5rem;
+  margin-bottom: 5rem;
   padding: 1rem;
 }
 
@@ -116,23 +117,32 @@ button {
 
 #img-slider {
   display: flex;
+  padding: 0;
+  justify-content: center;
+  align-content: center;
 }
 #img-window {
-  height: 90vh;
+  margin-top: 5rem;
+  height: calc(100vh - 10rem);
   border: 1px solid #141418;
-  width: 70vw;
+
   overflow: hidden;
-  margin: 5rem;
 }
 
 #img-holder {
+  display: flex;
   width: 10000px;
   height: inherit;
   background-color: #6649b8;
 }
 
 .images {
-  height: inherit;
+  height: calc(100vh - 10rem);
+  color: #141418;
+}
+
+.scroller {
+  margin: 1rem;
 }
 
 /* small screens */
