@@ -1,5 +1,5 @@
 import "./style.css";
-import { slider } from "./img-slider";
+import { slider, resizer } from "./img-slider";
 
 function buildElement(elementType, id, classList, innerHTML) {
   const element = document.createElement(elementType);
@@ -117,5 +117,13 @@ function buildMain(param) {
 buildNav();
 /* buildMain("default"); */
 buildMain("images");
+//resizer();
+
+/* let imageWindow = document.getElementById("img-window");
+console.log(imageWindow);
+let newWidth = document.getElementById("image1").clientWidth.toString() + "px";
+console.log(newWidth);
+console.log(imageWindow);
+imageWindow.style.width = newWidth; */
 
 export { buildElement };
