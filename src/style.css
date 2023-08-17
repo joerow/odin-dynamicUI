@@ -122,6 +122,7 @@ button {
   align-content: center;
 }
 #img-window {
+  display: flex;
   margin: 5rem;
   height: calc(100vh - 10rem);
   border: 1px solid #141418;
@@ -130,9 +131,9 @@ button {
 
 #img-holder {
   display: flex;
-  width: 10000px;
   height: inherit;
   background-color: #6649b8;
+  transition: 500ms;
 }
 
 .images {

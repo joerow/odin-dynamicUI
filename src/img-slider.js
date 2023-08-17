@@ -58,21 +58,62 @@ const slider = () => {
   };
   loadImages();
 
+  let currentPosition = 1;
+  let previousPosition = 0;
+  let imageWindow = document.getElementById("img-window");
+  let imageHolder = document.getElementById("img-holder");
+  let translateValue = 0;
+
   //set the next image function
   let next = document.getElementById("scroll-forward");
   next.onclick = function () {
-    let imageWindow = document.getElementById("img-window");
-    let newWidth =
-      document.getElementById("img-cont-1").clientWidth.toString() + "px";
-    console.log(newWidth);
-    console.log("next clicked");
-    console.log(imageWindow);
-    imageWindow.style.width = newWidth;
+    if (document.getElementById("img-cont-" + (currentPosition + 1)) == null) {
+      console.log("No img " + currentPosition + " found. Returning to start");
+      currentPosition = 1;
+      translateValue = 0;
+      previousPosition = 0;
+      imageHolder.style.translate = "-" + translateValue.toString() + "px";
+    } else {
+      let currentWidth = document.getElementById(
+        "img-cont-" + currentPosition
+      ).clientWidth;
+      translateValue += currentWidth;
+      console.log("img " + currentPosition + " width:" + currentWidth);
+      imageHolder.style.translate = "-" + translateValue.toString() + "px";
+      console.log("translate value set to: " + imageHolder.style.translate);
+      currentPosition++;
+      console.log("current position: " + currentPosition);
+      previousPosition++;
+      console.log("previous position: " + previousPosition);
+    }
   };
+
   //set the previous next image function
   let back = document.getElementById("scroll-back");
   back.onclick = function () {
-    console.log("back clicked");
+    if (
+      document.getElementById("img-cont-" + previousPosition) == null ||
+      document.getElementById("img-cont-" + (previousPosition - 1)) == null
+    ) {
+      console.log("No img " + previousPosition + " found. Returning to start");
+      currentPosition = 1;
+      translateValue = 0;
+      previousPosition = 0;
+      imageHolder.style.translate = "-" + translateValue.toString() + "px";
+    } else {
+      previousPosition = currentPosition - 1;
+      let previousWidth = document.getElementById(
+        "img-cont-" + previousPosition
+      ).clientWidth;
+      console.log("previous width= " + previousWidth);
+      translateValue -= previousWidth;
+      console.log("translate value" + translateValue);
+      console.log("img " + previousPosition + " width:" + previousWidth);
+      imageHolder.style.translate = "-" + translateValue.toString() + "px";
+      console.log("translate value set to: " + imageHolder.style.translate);
+      currentPosition--;
+      console.log("current position: " + currentPosition);
+    }
   };
 };
 
