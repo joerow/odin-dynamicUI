@@ -106,7 +106,6 @@ body::-webkit-scrollbar-thumb {
 
 main {
   margin-left: 5rem;
-  margin-bottom: 5rem;
   padding: 1rem;
 }
 
@@ -156,6 +155,20 @@ button {
     transition: var(--transition-speed);
   }
 
+  #img-window {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    height: calc(100vh - 5rem);
+  }
+  #img-slider {
+    margin-bottom: 0rem;
+  }
+
+  .images {
+    height: calc(100vh - 5rem);
+    color: #141418;
+  }
+
   .logo {
     display: none;
   }
@@ -169,6 +182,7 @@ button {
   }
   main {
     margin: 0;
+    margin-bottom: 5rem;
   }
 }
 /* Large screens */
