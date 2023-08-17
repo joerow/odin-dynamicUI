@@ -11,7 +11,7 @@
 
 body {
   color: black;
-  background-color: white;
+  background-color: rgb(134, 134, 134);
   margin: 0;
   padding: 0;
 }
@@ -106,12 +106,43 @@ body::-webkit-scrollbar-thumb {
 
 main {
   margin-left: 5rem;
+  margin-bottom: 5rem;
   padding: 1rem;
 }
 
 button {
   all: unset;
   cursor: pointer;
+}
+
+#img-slider {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  align-content: center;
+}
+#img-window {
+  display: flex;
+  margin: 5rem;
+  height: calc(100vh - 10rem);
+  border: 1px solid #141418;
+  overflow: hidden;
+}
+
+#img-holder {
+  display: flex;
+  height: inherit;
+  background-color: #6649b8;
+  transition: 500ms;
+}
+
+.images {
+  height: calc(100vh - 10rem);
+  color: #141418;
+}
+
+.scroller {
+  margin: 1rem;
 }
 
 /* small screens */
